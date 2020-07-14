@@ -1,0 +1,4 @@
+<ion-item size-xs="12" size-md="6" size-lg="4">
+    <ion-label class="ion-text-capitalize">{{ producto.nombre}}</ion-label>
+    <ion-button [color]="color" (click)="enFavoritos ? borrarProducto(producto) : agregarProducto(producto)">{{ mensaje }}</ion-button>
+</ion-item>

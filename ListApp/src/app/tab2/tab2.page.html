@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Lista Actual
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="container">
+
+
+    <ion-slides *ngIf="dataLocalService.productos.length === 0">
+        <ion-slide>
+            <ion-label>No hay Favoritos</ion-label>
+        </ion-slide>
+    </ion-slides>
+
+    <!-- Aca debe ir el llamado a <app-productos> -->
+
+    <app-productos [enFavoritos]="true" *ngIf="dataLocalService.productos.length > 0" [productos]="dataLocalService.productos"></app-productos>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "ListApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
