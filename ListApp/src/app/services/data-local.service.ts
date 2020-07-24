@@ -28,6 +28,17 @@ export class DataLocalService {
         const existe = this.productos.find( prod => prod.nombre === producto.nombre);
         if ( !existe ) {
               this.productos.unshift(producto);
+              // tslint:disable-next-line: only-arrow-functions
+              this.productos.sort( function(a: Producto, b: Producto) {
+                                  if (a.nombre > b.nombre) {
+                                    return 1;
+                                  }
+                                  if (a.nombre < b.nombre) {
+                                    return -1;
+                                  }
+                                  // a must be equal to b
+                                  return 0;
+                                });
               this.storage.set('favoritos', this.productos);
         }
         this.presentToast(`Agregado ${producto.nombre} a la Lista`);

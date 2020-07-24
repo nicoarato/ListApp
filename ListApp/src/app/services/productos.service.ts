@@ -10,6 +10,6 @@ export class ProductosService {
   constructor( private http: HttpClient) { }
 
   getProductos() {
-    return this.http.get<Producto>('https://listasuper-cae6f.firebaseio.com/productos.json');
+    return this.http.get<Producto[]>('https://listasuper-cae6f.firebaseio.com/productos.json');
   }
 }

@@ -10,7 +10,8 @@ import { DataLocalService } from '../services/data-local.service';
 })
 export class Tab1Page implements OnInit{
 
-  productos: Producto;
+  productos: Producto[];
+
   constructor(private productosService: ProductosService,
               private dataLocalService: DataLocalService) {}
 
@@ -19,14 +20,30 @@ export class Tab1Page implements OnInit{
   }
 
   cargarProductos( event? ) {
-    this.productosService.getProductos()
-    .subscribe(res => {
-           this.productos = res;
-           if (event) {
-            // console.log(event.target);
-            event.target.complete();
-           }
-    });
+    if (!this.productos){
+
+      this.productosService.getProductos()
+      .subscribe(res => {
+             this.productos = res;
+            //  console.log(this.productos);
+            //  tslint:disable-next-line: only-arrow-functions
+             this.productos.sort( function(a: Producto, b: Producto) {
+              if (a.nombre > b.nombre) {
+                return 1;
+              }
+              if (a.nombre < b.nombre) {
+                return -1;
+              }
+              // a must be equal to b
+              return 0;
+            });
+             if (event) {
+              // console.log(event.target);
+              event.target.complete();
+             }
+      });
+
+    }
   }
 
 
