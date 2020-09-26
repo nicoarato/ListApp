@@ -21,7 +21,6 @@ export class Tab1Page implements OnInit{
 
   cargarProductos( event? ) {
     if (!this.productos){
-
       this.productosService.getProductos()
       .subscribe(res => {
              this.productos = res;

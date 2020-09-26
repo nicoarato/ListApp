@@ -4,6 +4,15 @@ ion-slide {
     height: 100%;
 }
 
-ion-avatar {
+ion-avatar,
+ion-note {
     margin: auto;
+}
+
+.fondo {
+    // --background: rgb(238, 174, 202);
+    // --background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    --background: linear-gradient(-120deg, #dae3e9 0%, #f8f8f8 100%);
+    // --background: rgb(186, 198, 198);
+    // --background: radial-gradient(circle, rgba(186, 198, 198, 1) 0%, rgba(122, 218, 250, 1) 28%, rgba(0, 0, 0, 1) 100%);
 }

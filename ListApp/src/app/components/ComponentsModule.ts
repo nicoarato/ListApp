@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ProductoComponent } from './producto/producto.component';
 import { ProductosComponent } from './productos/productos.component';
 import { IonicModule } from '@ionic/angular';
+import { PipesModule } from '../pipes/pipes.module';
+
 
 
 @NgModule({
@@ -12,7 +14,8 @@ import { IonicModule } from '@ionic/angular';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    PipesModule
   ],
   exports: [
     ProductosComponent

@@ -1,3 +1,6 @@
-<ion-list *ngFor="let producto of productos">
+<ion-searchbar *ngIf="!enFavoritos" class="animate__animated animate__debounce" (ionChange)="buscar($event)" placeholder="Buscar"></ion-searchbar>
+
+<ion-list *ngFor="let producto of productos | filter: textoBuscar" class="list-group-item list-group-item-action animate__animated animate__fadeIn animate__fast ">
+    <!-- <ion-list *ngFor="let producto of productos" class="list-group-item list-group-item-action animate__animated animate__fadeIn animate__fast "> -->
     <app-producto [enFavoritos]="enFavoritos" [producto]="producto"></app-producto>
 </ion-list>

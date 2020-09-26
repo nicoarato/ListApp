@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class Tab3Page {
 
   sliderOp = {
-    allowSlidePrev: false,
-    allowSlideNext: false
+    allowSlidePrev: true,
+    allowSlideNext: true
   };
   constructor() {}
 

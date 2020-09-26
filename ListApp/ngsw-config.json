@@ -11,6 +11,11 @@
                 "/manifest.webmanifest",
                 "/*.css",
                 "/*.js"
+            ],
+            "urls": [
+                "https://listasuper-cae6f.firebaseio.com//**",
+                "https://cdnjs.cloudflare.com/ajax/libs/animate.css/**",
+                "./assets/**"
             ]
         }
     }, {
