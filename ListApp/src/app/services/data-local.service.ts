@@ -62,4 +62,12 @@ export class DataLocalService {
       const favoritos = await this.storage.clear();
       this.cargarFavoritos();
     }
+
+    armarListaProductos(): string {
+      const listaProductos: string[] = [];
+      this.productos.forEach(producto => {
+        listaProductos.push(producto.nombre);
+      });
+      return listaProductos.join('\n');
+    }
 }

@@ -1,8 +1,10 @@
 <ion-header [translucent]="true">
-    <ion-toolbar color="dark">
-        <ion-title>
+    <ion-toolbar class="header-lista" color="dark">
+        <ion-title slot="start">
             Lista Actual
         </ion-title>
+        <ion-button (click)="copiarTexto()" slot="end" shape="round" fill="outline">copia tu lista</ion-button>
+
     </ion-toolbar>
 </ion-header>
 

@@ -15,6 +15,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PipesModule } from './pipes/pipes.module';
 
+import { Clipboard } from '@ionic-native/clipboard/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +31,7 @@ import { PipesModule } from './pipes/pipes.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Clipboard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

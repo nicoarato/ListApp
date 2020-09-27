@@ -13,7 +13,7 @@
                 "/*.js"
             ],
             "urls": [
-                "https://listasuper-cae6f.firebaseio.com//**",
+                "https://listasuper-cae6f.firebaseio.com/**",
                 "https://cdnjs.cloudflare.com/ajax/libs/animate.css/**",
                 "./assets/**"
             ]
