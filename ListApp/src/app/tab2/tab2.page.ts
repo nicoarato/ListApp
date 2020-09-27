@@ -25,8 +25,9 @@ export class Tab2Page {
     this.textoCopiado = ' ';
     this.textoCopiado = await this.dataLocalService.armarListaProductos();
     // console.log(this.textoCopiado);
-    navigator.clipboard.readText()
-    .then(() => this.copyMessage(this.textoCopiado));
+    // navigator.clipboard.readText()
+    // .then(() => this.copyMessage(this.textoCopiado));
+    this.copyMessage(this.textoCopiado);
   }
 
   copyMessage(val: string){
